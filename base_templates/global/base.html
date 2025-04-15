@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda</title>
+    <title>{{ site_title }}Agenda</title>
     <link rel="stylesheet" type="text/css" href="{% static 'global/css/style.css' %}">
 </head>
 <body>
+    {% include "global/partials/_header.html" %}
+
     <main class="content">
         {% block content %}{% endblock content %}
+        {% include "global/partials/_pagination.html" %}
     </main>
 </body>
 </html>
